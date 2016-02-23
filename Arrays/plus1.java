@@ -12,6 +12,26 @@ If the vector has [1, 2, 3]
 the returned vector should be [1, 2, 4]
 
 as 123 + 1 = 124.
+Simple test cases to lookout for -  no starting 0's allowed
+/*              a.add(1);
+		a.add(2);
+		a.add(4);
+		*//*
+		a.add(1);
+		a.add(2);
+		a.add(9);
+		*//*
+		a.add(2);
+		a.add(9);
+		a.add(9);*/
+		/*
+		a.add(9);
+		a.add(9);
+		a.add(9);
+		//*/
+		/*a.add(0);
+		a.add(0);
+		a.add(1);
  */
 package Arrays;
 
