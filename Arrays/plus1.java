@@ -39,6 +39,55 @@ import java.util.ArrayList;
 
 public class plus1 
 {
+	
+	
+	public static ArrayList<Integer> plusOne(ArrayList<Integer> a) 
+	{
+	    int len = a.size()-1;
+		for(int i=0;i<len;i++)
+		{
+			if(a.get(i)==0)
+			{
+				a.remove(i);
+				i--;
+			}
+			else
+				break;
+		}
+		len = a.size()-1;
+		int carry=0;
+		for(int i=len;i>=0;i--)
+		{
+			if(a.get(i)==9)
+			{
+				a.set(i,0);
+				carry=1;
+				continue;
+			}
+			else
+			{
+				a.set(i, a.get(i)+1);
+				carry=0;
+				break;
+			}
+				
+		}
+		if(carry==1)
+		{
+			ArrayList<Integer> b = new ArrayList();
+			b.add(carry);
+			for(int i=0;i<a.size();i++)
+				b.add(a.get(i));
+			return b;
+		}
+		
+		return a;	
+	    
+	}
+
+	/* Another possible solution*/
+	
+	
 	public static ArrayList<Integer> plusOne(ArrayList<Integer> a) {
 	    int c=0;
 	   
@@ -96,4 +145,7 @@ public class plus1
 	    }
 	    return a;
 	}
+	
+	
+	
 }
